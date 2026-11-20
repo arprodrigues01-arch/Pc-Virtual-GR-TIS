@@ -1,0 +1,12 @@
+{
+  "name": "PC Virtual com Tailscale",
+  "image": "ubuntu:22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/tailscale/codespace/tailscale": {}
+  },
+  "forwardPorts": [
+    8006
+  ],
+  "postStartCommand": "docker run -d --name ubuntu-desktop -p 8006:3000 lscr.io/linuxserver/webtop:ubuntu-xfce"
+}
