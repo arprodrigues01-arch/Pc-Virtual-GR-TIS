@@ -1,9 +1,0 @@
-{
-  "name": "PC Virtual Windows",
-  "image": "://microsoft.com",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-  "forwardPorts": [8006],
-  "postStartCommand": "docker run -d --name windows -p 8006:8006 --device=/dev/kvm --cap-add NET_ADMIN --stop-timeout 120 dockurr/windows"
-}
